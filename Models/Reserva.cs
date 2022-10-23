@@ -15,13 +15,13 @@ namespace DesafioProjetoHospedagem.Models
 
         public void CadastrarHospedes(List<Pessoa> hospedes)
         {
-            if (hospedes.Count <= Suite.Capacidade)
+            if (hospedes.Count > Suite.Capacidade)
             {
-                Hospedes = hospedes;
+                Console.WriteLine("A quantidade de hóspedes é maior que a capacidade do quarto");
             }
             else
             {
-                Console.WriteLine("A quantidade de hóspedes é maior que a capacidade do quarto");
+                Hospedes = hospedes;
             }
         }
 
@@ -29,7 +29,10 @@ namespace DesafioProjetoHospedagem.Models
         {
             Suite = suite;
         }
-
+        public string ObterTipoSuite()
+        {
+            return Suite.TipoSuite;
+        }
         public int ObterQuantidadeHospedes()
         {
             return Hospedes.Count;
