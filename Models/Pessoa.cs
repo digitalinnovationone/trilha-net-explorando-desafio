@@ -2,7 +2,7 @@ namespace DesafioProjetoHospedagem.Models;
 
 public class Pessoa
 {
-    public Pessoa() { }
+    public Pessoa(List<Pessoa> hospedes) { }
 
     public Pessoa(string nome)
     {
