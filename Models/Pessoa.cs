@@ -18,4 +18,17 @@ public class Pessoa
     public string Nome { get; set; }
     public string Sobrenome { get; set; }
     public string NomeCompleto => $"{Nome} {Sobrenome}".ToUpper();
+
+    public static Pessoa adicionarHospede() {
+
+        Pessoa person = new Pessoa();
+
+        Console.WriteLine("Nome do Hóspede: ");
+
+        person.Nome = Console.ReadLine();
+        
+        return person;
+
+    }
+
 }
