@@ -1,7 +1,7 @@
 ﻿using System.Text;
-using DesafioProjetoHospedagem.Models;
+using Hotelaria.Models;
 
-Console.OutputEncoding = Encoding.UTF8;
+Console.OutputEncoding = Encoding.UTF8; // Coloca o encoding para UTF8 para exibir acentuação
 
 // Cria os modelos de hóspedes e cadastra na lista de hóspedes
 List<Pessoa> hospedes = new List<Pessoa>();
@@ -16,7 +16,7 @@ hospedes.Add(p2);
 Suite suite = new Suite(tipoSuite: "Premium", capacidade: 2, valorDiaria: 30);
 
 // Cria uma nova reserva, passando a suíte e os hóspedes
-Reserva reserva = new Reserva(diasReservados: 5);
+Reserva reserva = new Reserva(diasReservados: 7);
 reserva.CadastrarSuite(suite);
 reserva.CadastrarHospedes(hospedes);
 
