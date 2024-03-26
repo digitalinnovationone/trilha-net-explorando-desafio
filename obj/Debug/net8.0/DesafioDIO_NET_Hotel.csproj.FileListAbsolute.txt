@@ -1,0 +1,14 @@
+C:\Users\Gustavo\source\repos\DesafioDIO_NET_Hotel\DesafioDIO_NET_Hotel\bin\Debug\net8.0\DesafioDIO_NET_Hotel.exe
+C:\Users\Gustavo\source\repos\DesafioDIO_NET_Hotel\DesafioDIO_NET_Hotel\bin\Debug\net8.0\DesafioDIO_NET_Hotel.deps.json
+C:\Users\Gustavo\source\repos\DesafioDIO_NET_Hotel\DesafioDIO_NET_Hotel\bin\Debug\net8.0\DesafioDIO_NET_Hotel.runtimeconfig.json
+C:\Users\Gustavo\source\repos\DesafioDIO_NET_Hotel\DesafioDIO_NET_Hotel\bin\Debug\net8.0\DesafioDIO_NET_Hotel.dll
+C:\Users\Gustavo\source\repos\DesafioDIO_NET_Hotel\DesafioDIO_NET_Hotel\bin\Debug\net8.0\DesafioDIO_NET_Hotel.pdb
+C:\Users\Gustavo\source\repos\DesafioDIO_NET_Hotel\DesafioDIO_NET_Hotel\obj\Debug\net8.0\DesafioDIO_NET_Hotel.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Gustavo\source\repos\DesafioDIO_NET_Hotel\DesafioDIO_NET_Hotel\obj\Debug\net8.0\DesafioDIO_NET_Hotel.AssemblyInfoInputs.cache
+C:\Users\Gustavo\source\repos\DesafioDIO_NET_Hotel\DesafioDIO_NET_Hotel\obj\Debug\net8.0\DesafioDIO_NET_Hotel.AssemblyInfo.cs
+C:\Users\Gustavo\source\repos\DesafioDIO_NET_Hotel\DesafioDIO_NET_Hotel\obj\Debug\net8.0\DesafioDIO_NET_Hotel.csproj.CoreCompileInputs.cache
+C:\Users\Gustavo\source\repos\DesafioDIO_NET_Hotel\DesafioDIO_NET_Hotel\obj\Debug\net8.0\DesafioDIO_NET_Hotel.dll
+C:\Users\Gustavo\source\repos\DesafioDIO_NET_Hotel\DesafioDIO_NET_Hotel\obj\Debug\net8.0\refint\DesafioDIO_NET_Hotel.dll
+C:\Users\Gustavo\source\repos\DesafioDIO_NET_Hotel\DesafioDIO_NET_Hotel\obj\Debug\net8.0\DesafioDIO_NET_Hotel.pdb
+C:\Users\Gustavo\source\repos\DesafioDIO_NET_Hotel\DesafioDIO_NET_Hotel\obj\Debug\net8.0\DesafioDIO_NET_Hotel.genruntimeconfig.cache
+C:\Users\Gustavo\source\repos\DesafioDIO_NET_Hotel\DesafioDIO_NET_Hotel\obj\Debug\net8.0\ref\DesafioDIO_NET_Hotel.dll
