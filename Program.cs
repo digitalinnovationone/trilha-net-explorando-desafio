@@ -22,4 +22,10 @@ reserva.CadastrarHospedes(hospedes);
 
 // Exibe a quantidade de hóspedes e o valor da diária
 Console.WriteLine($"Hóspedes: {reserva.ObterQuantidadeHospedes()}");
-Console.WriteLine($"Valor diária: {reserva.CalcularValorDiaria()}");
+Console.WriteLine($"Valor total: {reserva.CalcularValorDiaria()}");
+
+//Houve um erro de texto no código
+//O valor da diária já é uma variável concedida quando se cria a Suite
+//O correto seria pedir o valor total (já que foi pedido o cálculo = DiasReservados * Suite.ValorDiaria)
+//Pode-se dizer que há um erro de redundância no código
+//Além de que, a saída no terminal ficaria "Valor diária: 150" algo que se enquadra como um erro
