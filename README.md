@@ -1,3 +1,19 @@
+## Description
+🎯 Development was **strictly focused** on addressing the challenge and **making specific code improvements**.
+
+## Summary
+Primary objectives of the challenge:
+- ✅ Implemented of the `CadastrarHospedes()` method
+- ✅ Implemented of the `ObterQuantidadeHospedes()` method
+- ✅ Implemented of the `CalcularValorDiaria()` method
+
+Additional contributions to the project:
+- ✅ Implemented the private constants `MinimoDiasParaDesconto` and `PercentagemDesconto` for **improved code readability** and **maintenance** and to **avoid magic numbers**
+- ✅ Implemented the private methods `AplicarDesconto()` and `CalcularValorDesconto()` to **adhere to the SOLID Single Responsibility Principle (SRP)**
+- 🔧 Updated project to **.NET 8**
+
+---
+
 # DIO - Trilha .NET - Explorando a linguagem C#
 www.dio.me
 
