@@ -19,3 +19,7 @@ O seu programa deverá cálcular corretamente os valores dos métodos da classe 
 
 ## Solução
 O código está pela metade, e você deverá dar continuidade obedecendo as regras descritas acima, para que no final, tenhamos um programa funcional. Procure pela palavra comentada "TODO" no código, em seguida, implemente conforme as regras acima.
+
+## Implementação:
+- Implementado por Silvio Dias
+- Alterado método CalcularValorDiaria para retornar uma string formatada com a moeda corrente (Real)
