@@ -1,0 +1,32 @@
+[
+  {
+    "Id": 1,
+    "TipoSuite": "Standard",
+    "Capacidade": 2,
+    "ValorDiaria": 100.00
+  },
+  {
+    "Id": 2,
+    "TipoSuite": "Deluxe",
+    "Capacidade": 4,
+    "ValorDiaria": 200.00
+  },
+  {
+    "Id": 3,
+    "TipoSuite": "Suite Presidencial",
+    "Capacidade": 6,
+    "ValorDiaria": 500.00
+  },
+  {
+    "Id": 4,
+    "TipoSuite": "Junior Suite",
+    "Capacidade": 3,
+    "ValorDiaria": 150.00
+  },
+  {
+    "Id": 5,
+    "TipoSuite": "Family Suite",
+    "Capacidade": 5,
+    "ValorDiaria": 250.00
+  }
+]
