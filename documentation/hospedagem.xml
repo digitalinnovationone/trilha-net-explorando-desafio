@@ -1,0 +1,237 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>DesafioProjetoHospedagem</name>
+    </assembly>
+    <members>
+        <member name="T:DesafioProjetoHospedagem.Exceptions.CadastrarHospedesException">
+            <summary>
+            Classe que representa um erro ao tentar cadastrar uma determinada quantidade de hóspedes em uma suíte 
+            </summary>
+        </member>
+        <member name="M:DesafioProjetoHospedagem.Exceptions.CadastrarHospedesException.#ctor">
+            <summary>
+            Método construtor da classe
+            </summary>
+        </member>
+        <member name="M:DesafioProjetoHospedagem.Exceptions.CadastrarHospedesException.#ctor(System.String)">
+            <summary>
+            Método construtor da classe
+            </summary>
+            <param name="message">Mensagem que será exibida ao usuário</param>
+        </member>
+        <member name="M:DesafioProjetoHospedagem.Exceptions.CadastrarHospedesException.#ctor(System.String,System.Exception)">
+            <summary>
+            Método construtor da classe
+            </summary>
+            <param name="message">Mensagem que será exibida ao usuário</param>
+            <param name="innerException">Pilha contendo mais detalhes sobre a exceção</param>
+        </member>
+        <member name="T:DesafioProjetoHospedagem.Extensions.EnumExtension">
+            <summary>
+            Métodos de extensão da classe Enum
+            </summary>
+        </member>
+        <member name="M:DesafioProjetoHospedagem.Extensions.EnumExtension.GetDescription(System.Enum)">
+            <summary>
+            Recupera a descrição do valor selecionado na enum
+            </summary>
+            <param name="value">Valor selecionado na enum</param>
+            <returns>A descrição do valor selecionado na enum</returns>
+        </member>
+        <member name="T:DesafioProjetoHospedagem.Models.Pessoa">
+            <summary>
+            Classe que representa uma pessoa
+            </summary>
+            <param name="nome">Nome da pessoa</param>
+            <param name="sobrenome">Sobrenome da pessoa</param>
+            <param name="idade">Idade da pessoa</param>
+        </member>
+        <member name="M:DesafioProjetoHospedagem.Models.Pessoa.#ctor(System.String,System.String,System.Int32)">
+            <summary>
+            Classe que representa uma pessoa
+            </summary>
+            <param name="nome">Nome da pessoa</param>
+            <param name="sobrenome">Sobrenome da pessoa</param>
+            <param name="idade">Idade da pessoa</param>
+        </member>
+        <member name="M:DesafioProjetoHospedagem.Models.Pessoa.#ctor(System.String)">
+            <summary>
+            Método construtor da classe
+            </summary>
+            <param name="nome">Nome da pessoa</param>
+        </member>
+        <member name="M:DesafioProjetoHospedagem.Models.Pessoa.#ctor">
+            <summary>
+            Método construtor da classe
+            </summary>
+        </member>
+        <member name="P:DesafioProjetoHospedagem.Models.Pessoa.Nome">
+            <summary>
+            Nome da pessoa
+            </summary>
+        </member>
+        <member name="P:DesafioProjetoHospedagem.Models.Pessoa.Sobrenome">
+            <summary>
+            Sobrenome da pessoa
+            </summary>
+        </member>
+        <member name="P:DesafioProjetoHospedagem.Models.Pessoa.NomeCompleto">
+            <summary>
+            Nome completo da pessoa
+            </summary>
+        </member>
+        <member name="P:DesafioProjetoHospedagem.Models.Pessoa.Idade">
+            <summary>
+            Idade da pessoa
+            </summary>
+        </member>
+        <member name="M:DesafioProjetoHospedagem.Models.Pessoa.ToString">
+            <summary>
+            Retorna uma representação da classe utilizando uma estrutura específica
+            </summary>
+            <returns>Uma String com os valores da classe interpolados</returns>
+        </member>
+        <member name="T:DesafioProjetoHospedagem.Models.Reserva">
+            <summary>
+            Classe que representa uma reserva feita por uma pessoa
+            </summary>
+            <param name="diasReservados">Quantidade de dias que a pessoa irá ficar hospedado.</param>
+        </member>
+        <member name="M:DesafioProjetoHospedagem.Models.Reserva.#ctor(System.Int32)">
+            <summary>
+            Classe que representa uma reserva feita por uma pessoa
+            </summary>
+            <param name="diasReservados">Quantidade de dias que a pessoa irá ficar hospedado.</param>
+        </member>
+        <member name="M:DesafioProjetoHospedagem.Models.Reserva.#ctor">
+            <summary>
+            Método construtor da classe
+            </summary>
+        </member>
+        <member name="P:DesafioProjetoHospedagem.Models.Reserva.Hospedes">
+            <summary>
+            Quantidade de pessoas que irão utilizar a suíte do hotel
+            </summary>
+        </member>
+        <member name="P:DesafioProjetoHospedagem.Models.Reserva.Suite">
+            <summary>
+            Suite escolhida pela pessoa
+            </summary>
+        </member>
+        <member name="P:DesafioProjetoHospedagem.Models.Reserva.DiasReservados">
+            <summary>
+            Quantidade de dias que a pessoa irá ficar hospedado.
+            </summary>
+        </member>
+        <member name="M:DesafioProjetoHospedagem.Models.Reserva.CadastrarHospedes(DesafioProjetoHospedagem.Models.Pessoa[])">
+            <summary>
+            Método que cadastra os hóspedes
+            </summary>
+            <param name="hospedes">Hóspedes que serão cadastrados</param>
+        </member>
+        <member name="M:DesafioProjetoHospedagem.Models.Reserva.CadastrarSuite(DesafioProjetoHospedagem.Models.Suite)">
+            <summary>
+            Cadastra a suíte escolhida pela pessoa
+            </summary>
+            <param name="suite">Suíte escolhida pela pessoa</param>
+        </member>
+        <member name="M:DesafioProjetoHospedagem.Models.Reserva.ObterQuantidadeHospedes">
+            <summary>
+            Retorna a quantidade de pessoas cadastradas
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:DesafioProjetoHospedagem.Models.Reserva.CalcularValorDiaria">
+            <summary>
+            Calcula o valor da diária
+            </summary>
+            <returns>Retorna o valor da diária</returns>
+        </member>
+        <member name="M:DesafioProjetoHospedagem.Models.Reserva.ToString">
+            <summary>
+            Retorna uma representação da classe utilizando uma estrutura específica
+            </summary>
+            <returns>Uma String com os valores da classe interpolados</returns>
+        </member>
+        <member name="T:DesafioProjetoHospedagem.Models.Suite">
+            <summary>
+            Classe que representa uma suíte do hotel
+            </summary>
+            <param name="tipoSuite">Tipo de suíte</param>
+            <param name="capacidade">Quantidade de hóspedes da suíte</param>
+            <param name="valorDiaria">Valor da diária</param>
+        </member>
+        <member name="M:DesafioProjetoHospedagem.Models.Suite.#ctor(System.String,System.Int32,System.Decimal)">
+            <summary>
+            Classe que representa uma suíte do hotel
+            </summary>
+            <param name="tipoSuite">Tipo de suíte</param>
+            <param name="capacidade">Quantidade de hóspedes da suíte</param>
+            <param name="valorDiaria">Valor da diária</param>
+        </member>
+        <member name="M:DesafioProjetoHospedagem.Models.Suite.#ctor">
+            <summary>
+            Método construtor da classe
+            </summary>
+        </member>
+        <member name="P:DesafioProjetoHospedagem.Models.Suite.TipoSuite">
+            <summary>
+            Tipo de suíte
+            </summary>
+        </member>
+        <member name="P:DesafioProjetoHospedagem.Models.Suite.Capacidade">
+            <summary>
+            Quantidade de hóspedes da suíte
+            </summary>
+        </member>
+        <member name="P:DesafioProjetoHospedagem.Models.Suite.ValorDiaria">
+            <summary>
+            Valor da diária
+            </summary>
+        </member>
+        <member name="M:DesafioProjetoHospedagem.Models.Suite.ToString">
+            <summary>
+            Retorna uma representação da classe utilizando uma estrutura específica
+            </summary>
+            <returns>Uma String com os valores da classe interpolados</returns>
+        </member>
+        <member name="T:DesafioProjetoHospedagem.Program">
+            <summary>
+            Classe que representa o programa
+            </summary>
+        </member>
+        <member name="M:DesafioProjetoHospedagem.Program.#ctor">
+            <summary>
+            Método construtor da classe
+            </summary>
+        </member>
+        <member name="M:DesafioProjetoHospedagem.Program.Dispose(System.Boolean)">
+            <summary>
+            Método destrutor da classe
+            </summary>
+            <param name="disposing">Executa rotinas adicionais</param>
+        </member>
+        <member name="M:DesafioProjetoHospedagem.Program.Dispose">
+            <summary>
+            Método destrutor da classe
+            </summary>
+        </member>
+        <member name="M:DesafioProjetoHospedagem.Program.Finalize">
+            <summary>
+            Método destrutor da classe
+            </summary>
+        </member>
+        <member name="M:DesafioProjetoHospedagem.Program.Execute">
+            <summary>
+            Método de execução do programa
+            </summary>
+        </member>
+        <member name="M:DesafioProjetoHospedagem.Program.Main(System.String[])">
+            <summary>
+            Método de inicialização do programa
+            </summary>
+            <param name="_">Parãmetros iniciais de execução do programa - não utilizado</param>
+        </member>
+    </members>
+</doc>

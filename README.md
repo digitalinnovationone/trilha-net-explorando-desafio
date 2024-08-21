@@ -19,3 +19,11 @@ O seu programa deverá cálcular corretamente os valores dos métodos da classe 
 
 ## Solução
 O código está pela metade, e você deverá dar continuidade obedecendo as regras descritas acima, para que no final, tenhamos um programa funcional. Procure pela palavra comentada "TODO" no código, em seguida, implemente conforme as regras acima.
+
+## Implementação
+1. Foi feito um ajuste no arquivo DesafioProjetoHospedagem.csproj, para melhorias na validação do código; geração de documentação e obrigatoriedade na utilização de declaração de uso de bibliotecas nas classes.
+2. Foram feitos ajustes nas classes Pessoa, Reserva e Suite, referentes a documentação dos métodos e propriedades; utilização de bibliotecas; adição de método para representar a classe como uma String.
+3. Foram criadas classes para gerenciamento de exceções e de extensão.
+4. A classe Program foi revisada, para melhor atender as requisições do projeto.
+5. Foi adicionada a biblioteca FAke.Net, para geração de dados aleatórios, para se terem testes mais aleatórios.
+
