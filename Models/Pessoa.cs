@@ -8,7 +8,6 @@ public class Pessoa
     {
         Nome = nome;
     }
-
     public Pessoa(string nome, string sobrenome)
     {
         Nome = nome;
