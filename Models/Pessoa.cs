@@ -1,3 +1,5 @@
+using System.Runtime.InteropServices;
+
 namespace DesafioProjetoHospedagem.Models;
 
 public class Pessoa
