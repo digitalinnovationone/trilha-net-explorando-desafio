@@ -2,6 +2,7 @@ namespace DesafioProjetoHospedagem.Models;
 
 public class Pessoa
 {
+    //Construtor vazio, permite crie uma instância de Pessoa sem fornecer valores iniciais
     public Pessoa() { }
 
     public Pessoa(string nome)
