@@ -1,5 +1,5 @@
-﻿using System.Text;
-using DesafioProjetoHospedagem.Models;
+﻿using DesafioProjetoHospedagem.Models;
+using System.Text;
 
 Console.OutputEncoding = Encoding.UTF8;
 
@@ -18,8 +18,16 @@ Suite suite = new Suite(tipoSuite: "Premium", capacidade: 2, valorDiaria: 30);
 // Cria uma nova reserva, passando a suíte e os hóspedes
 Reserva reserva = new Reserva(diasReservados: 5);
 reserva.CadastrarSuite(suite);
-reserva.CadastrarHospedes(hospedes);
+
+try
+{
+    reserva.CadastrarHospedes(hospedes);
+}
+catch (Exception ex)
+{
+    Console.WriteLine($"Não foi possível realizar a operação: {ex.Message}");
+}
 
 // Exibe a quantidade de hóspedes e o valor da diária
 Console.WriteLine($"Hóspedes: {reserva.ObterQuantidadeHospedes()}");
-Console.WriteLine($"Valor diária: {reserva.CalcularValorDiaria()}");
+Console.WriteLine($"Valor diária: {suite.ValorDiaria} | Qtd dias: {reserva.DiasReservados} | Valor hospedagem: {reserva.CalcularValorHospedagem()}");
