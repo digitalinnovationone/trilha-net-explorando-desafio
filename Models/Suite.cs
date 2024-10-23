@@ -1,18 +1,36 @@
-namespace DesafioProjetoHospedagem.Models
-{
-    public class Suite
-    {
-        public Suite() { }
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
-        public Suite(string tipoSuite, int capacidade, decimal valorDiaria)
+namespace ProjetoHospedagem
+{
+    public class Pessoa
+    {
+        public Pessoa()
         {
-            TipoSuite = tipoSuite;
-            Capacidade = capacidade;
-            ValorDiaria = valorDiaria;
         }
 
-        public string TipoSuite { get; set; }
-        public int Capacidade { get; set; }
-        public decimal ValorDiaria { get; set; }
+        public Pessoa(string nome)
+        {
+            Nome = nome;
+        }
+
+        public Pessoa(string nome, string sobrenome)
+        {
+            Nome = nome;
+            Sobrenome = sobrenome;
+        }
+
+        public string Nome
+        {
+            get; set;
+        }
+        public string Sobrenome
+        {
+            get; set;
+        }
+        public string NomeCompleto => $"{Nome} {Sobrenome}".ToUpper();
     }
 }

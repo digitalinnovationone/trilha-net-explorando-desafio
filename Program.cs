@@ -1,25 +1,28 @@
-﻿using System.Text;
-using DesafioProjetoHospedagem.Models;
+﻿using ProjetoHospedagem;
+using System;
+class Program
+{
+    static void Main(string[] args)
+    {
+        List<Pessoa> hospedes = new List<Pessoa>();
 
-Console.OutputEncoding = Encoding.UTF8;
+        Pessoa p1 = new Pessoa(nome: "Hóspede 1");
+        Pessoa p2 = new Pessoa(nome: "Hóspede 2");
 
-// Cria os modelos de hóspedes e cadastra na lista de hóspedes
-List<Pessoa> hospedes = new List<Pessoa>();
+        hospedes.Add(p1);
+        hospedes.Add(p2);
 
-Pessoa p1 = new Pessoa(nome: "Hóspede 1");
-Pessoa p2 = new Pessoa(nome: "Hóspede 2");
+        // Cria a suíte
+        Suite suite = new Suite(tipoSuite: "Premium", capacidade: 2, valorDiaria: 30);
 
-hospedes.Add(p1);
-hospedes.Add(p2);
+        // Cria uma nova reserva, passando a suíte e os hóspedes
+        Reserva reserva = new Reserva(10);
+        reserva.CadastrarSuite(suite);
+        reserva.CadastrarHospedes(hospedes);
 
-// Cria a suíte
-Suite suite = new Suite(tipoSuite: "Premium", capacidade: 2, valorDiaria: 30);
+        // Exibe a quantidade de hóspedes e o valor da diária
+        Console.WriteLine($"Hóspedes: {reserva.ObterQuantidadeHospedes()}");
+        Console.WriteLine($"Valor diária: {reserva.CalcularValorDiaria()}");
 
-// Cria uma nova reserva, passando a suíte e os hóspedes
-Reserva reserva = new Reserva(diasReservados: 5);
-reserva.CadastrarSuite(suite);
-reserva.CadastrarHospedes(hospedes);
-
-// Exibe a quantidade de hóspedes e o valor da diária
-Console.WriteLine($"Hóspedes: {reserva.ObterQuantidadeHospedes()}");
-Console.WriteLine($"Valor diária: {reserva.CalcularValorDiaria()}");
+    }
+}
