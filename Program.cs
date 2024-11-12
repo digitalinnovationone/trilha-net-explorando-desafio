@@ -8,15 +8,18 @@ List<Pessoa> hospedes = new List<Pessoa>();
 
 Pessoa p1 = new Pessoa(nome: "Hóspede 1");
 Pessoa p2 = new Pessoa(nome: "Hóspede 2");
+// Pessoa p3 = new Pessoa(nome: "Hóspede 3"); // LIMIT TEST
 
 hospedes.Add(p1);
 hospedes.Add(p2);
+//hospedes.Add(p3); // LIMIT TEST
 
 // Cria a suíte
 Suite suite = new Suite(tipoSuite: "Premium", capacidade: 2, valorDiaria: 30);
 
 // Cria uma nova reserva, passando a suíte e os hóspedes
-Reserva reserva = new Reserva(diasReservados: 5);
+//string inputReservation = (Console.WriteLine()); //UNUSED
+Reserva reserva = new Reserva(diasReservados: 10); //inputReservation
 reserva.CadastrarSuite(suite);
 reserva.CadastrarHospedes(hospedes);
 
