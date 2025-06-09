@@ -1,25 +1,52 @@
-﻿using System.Text;
-using DesafioProjetoHospedagem.Models;
+﻿using DesafioProjetoHospedagem.Models;
+using trilha_net_explorando_desafio2.Services;
+using trilha_net_explorando_desafio2.Services.ReservaServices;
+using trilha_net_explorando_desafio2.Services.SuiteServices;
 
-Console.OutputEncoding = Encoding.UTF8;
+public class Program
+{
+    public static void Main(string[] args)
+    {
+        List<Pessoa> pessoas = new List<Pessoa>();
+        List<Reserva> reservas = new List<Reserva>();
+        List<Suite> suites = new List<Suite>();
+        
+        bool verificacao;
+        int opcao = 0;
 
-// Cria os modelos de hóspedes e cadastra na lista de hóspedes
-List<Pessoa> hospedes = new List<Pessoa>();
+        do
+        {
+            Console.Clear();
 
-Pessoa p1 = new Pessoa(nome: "Hóspede 1");
-Pessoa p2 = new Pessoa(nome: "Hóspede 2");
+            Console.WriteLine("Qual dos menus deseja acessar?");
+            Console.WriteLine("[1] - Pessoa\n[2] - Reserva\n[3] - Suite\n[0] - Encerrar\n:");
+            verificacao = int.TryParse(Console.ReadLine(), out opcao);
 
-hospedes.Add(p1);
-hospedes.Add(p2);
+            if (verificacao == false)
+            {
+                opcao = -1;
+            }
 
-// Cria a suíte
-Suite suite = new Suite(tipoSuite: "Premium", capacidade: 2, valorDiaria: 30);
+            switch (opcao)
+            {
+                case 1:
+                    PessoaMenu.Menu(pessoas);
+                    break;
+                case 2:
+                    ReservaMenu.Menu(reservas, pessoas, suites);
+                    break;
+                case 3:
+                    SuiteMenu.Menu(suites);
+                    break;
+                case 0:
+                    verificacao = false;
+                    break;
+                default:
+                    verificacao = true;
+                    break;
+            }
+        } while (verificacao);
 
-// Cria uma nova reserva, passando a suíte e os hóspedes
-Reserva reserva = new Reserva(diasReservados: 5);
-reserva.CadastrarSuite(suite);
-reserva.CadastrarHospedes(hospedes);
-
-// Exibe a quantidade de hóspedes e o valor da diária
-Console.WriteLine($"Hóspedes: {reserva.ObterQuantidadeHospedes()}");
-Console.WriteLine($"Valor diária: {reserva.CalcularValorDiaria()}");
+        Console.WriteLine("Programa finalizado!");
+    }
+}

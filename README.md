@@ -18,4 +18,6 @@ O seu programa deverá cálcular corretamente os valores dos métodos da classe 
 ![Diagrama de classe estacionamento](diagrama_classe_hotel.png)
 
 ## Solução
-O código está pela metade, e você deverá dar continuidade obedecendo as regras descritas acima, para que no final, tenhamos um programa funcional. Procure pela palavra comentada "TODO" no código, em seguida, implemente conforme as regras acima.
+Implementação dos trechos de código que estavam faltando foi feita, além disso, foi criado um menu para cadastrar, remover e editar cada objeto de cada classe.
+
+Para isso foi criada a pasta Services dentro do projeto, para melhor alocação dos menus de cada serviço e seus métodos utilitários.
