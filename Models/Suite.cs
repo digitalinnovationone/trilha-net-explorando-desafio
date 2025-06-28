@@ -1,18 +1,20 @@
+using DesafioProjetoHospedagem.Domain.Enums;
+
 namespace DesafioProjetoHospedagem.Models
 {
     public class Suite
     {
         public Suite() { }
 
-        public Suite(string tipoSuite, int capacidade, decimal valorDiaria)
+        public Suite(TypeOfSuite typeOfSuite, int capacity, decimal dailyValue)
         {
-            TipoSuite = tipoSuite;
-            Capacidade = capacidade;
-            ValorDiaria = valorDiaria;
+            TypeOfSuite = typeOfSuite;
+            Capacity = capacity;
+            DailyValue = dailyValue;
         }
 
-        public string TipoSuite { get; set; }
-        public int Capacidade { get; set; }
-        public decimal ValorDiaria { get; set; }
+        public TypeOfSuite TypeOfSuite { get; set; }
+        public int Capacity { get; set; }
+        public decimal DailyValue { get; set; }
     }
 }
