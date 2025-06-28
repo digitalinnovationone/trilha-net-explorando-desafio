@@ -7,4 +7,20 @@
     <Nullable>disable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="xunit" Version="2.9.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="DesafioProjetoHospedagemTests\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Remove="DesafioProjetoHospedagemTests\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="DesafioProjetoHospedagemTests\**" />
+  </ItemGroup>
+
 </Project>
