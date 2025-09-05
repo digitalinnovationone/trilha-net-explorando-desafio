@@ -1,9 +1,11 @@
+using System.Globalization;
+
 namespace DesafioProjetoHospedagem.Models
 {
     public class Reserva
     {
-        public List<Pessoa> Hospedes { get; set; }
-        public Suite Suite { get; set; }
+        private List<Pessoa> Hospedes { get; set; } = new List<Pessoa>();
+        private Suite Suite { get; set; }
         public int DiasReservados { get; set; }
 
         public Reserva() { }
@@ -13,48 +15,48 @@ namespace DesafioProjetoHospedagem.Models
             DiasReservados = diasReservados;
         }
 
-        public void CadastrarHospedes(List<Pessoa> hospedes)
+        public void CadastrarHospede(Pessoa hospede) => Hospedes.Add(hospede);
+
+        public void CadastrarSuite(Suite suite) => Suite = suite;
+
+        public int GetQuantidadeDias() => DiasReservados;
+        public int GetQuantidadeHospedes() => Hospedes.Count;
+
+
+        public Pessoa GetHospede(string nomeOrPosition)
         {
-            // TODO: Verificar se a capacidade é maior ou igual ao número de hóspedes sendo recebido
-            // *IMPLEMENTE AQUI*
-            if (true)
-            {
-                Hospedes = hospedes;
-            }
-            else
-            {
-                // TODO: Retornar uma exception caso a capacidade seja menor que o número de hóspedes recebido
-                // *IMPLEMENTE AQUI*
-            }
+            if(int.TryParse(nomeOrPosition, out int n)) return GetHospedeByIndex(n-1);
+            
+            return GetHospedeByName(nomeOrPosition);
         }
 
-        public void CadastrarSuite(Suite suite)
+        public Pessoa GetHospedeByName(string nome)
         {
-            Suite = suite;
+            TextInfo ti = CultureInfo.CurrentCulture.TextInfo;
+            nome = ti.ToTitleCase(nome); 
+            return Hospedes.FirstOrDefault(p =>
+                p.NomeCompleto.Equals(nome, StringComparison.OrdinalIgnoreCase));
+        }
+        
+        public Pessoa GetHospedeByIndex(int index)
+        {
+            if (index < 0 || index >= Hospedes.Count)
+                throw new ArgumentOutOfRangeException(nameof(index), "Índice inválido de hóspede.");
+    
+            return Hospedes[index];
         }
 
-        public int ObterQuantidadeHospedes()
+        
+        public void RemoverHospede(Pessoa hospede) => Hospedes.Remove(hospede);
+        
+        public decimal ValorTotal() => Suite.ValorDiaria * DiasReservados;
+
+        public static bool AtualizarHospede(Pessoa hospede, string newName)
         {
-            // TODO: Retorna a quantidade de hóspedes (propriedade Hospedes)
-            // *IMPLEMENTE AQUI*
-            return 0;
-        }
+            if (hospede == null) return false;
 
-        public decimal CalcularValorDiaria()
-        {
-            // TODO: Retorna o valor da diária
-            // Cálculo: DiasReservados X Suite.ValorDiaria
-            // *IMPLEMENTE AQUI*
-            decimal valor = 0;
-
-            // Regra: Caso os dias reservados forem maior ou igual a 10, conceder um desconto de 10%
-            // *IMPLEMENTE AQUI*
-            if (true)
-            {
-                valor = 0;
-            }
-
-            return valor;
+            hospede.NomeCompleto = newName;
+            return true;
         }
     }
 }
