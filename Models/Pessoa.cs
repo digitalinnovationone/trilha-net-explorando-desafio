@@ -15,7 +15,18 @@ public class Pessoa
         Sobrenome = sobrenome;
     }
 
-    public string Nome { get; set; }
+    private string _nome;
+
+    public string Nome
+    {
+        get => _nome;
+        set
+        {
+            if (value == "") throw new Exception("O nome não pode ser vazio");
+            _nome = value;
+        }
+
+    }
     public string Sobrenome { get; set; }
     public string NomeCompleto => $"{Nome} {Sobrenome}".ToUpper();
 }
