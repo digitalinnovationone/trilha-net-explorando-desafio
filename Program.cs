@@ -3,33 +3,30 @@ using DesafioProjetoHospedagem.Models;
 
 Console.OutputEncoding = Encoding.UTF8;
 
-// Cria os modelos de hóspedes e cadastra na lista de hóspedes
-List<Pessoa> hospedes = new List<Pessoa>();
+try
+{
+    // Inicialização limpa - padrão C# moderno
+    List<Pessoa> hospedes = new()
+    {
+        new Pessoa(nome: "Leonardo"),
+        new Pessoa(nome: "Ana"),
+        new Pessoa(nome: "Carlos"),
+        new Pessoa(nome: "Beatriz"),
+        new Pessoa(nome: "Daniel"),
+        new Pessoa(nome: "Fernanda"),
+        new Pessoa(nome: "Gabriel"),
+    };
 
-Pessoa p1 = new Pessoa(nome: "Hóspede 1");
-Pessoa p2 = new Pessoa(nome: "Hóspede 2");
-Pessoa p3 = new Pessoa(nome: "Hóspede 3");
-Pessoa p4 = new Pessoa(nome: "Hóspede 4");
-Pessoa p5 = new Pessoa(nome: "Hóspede 5");
-Pessoa p6 = new Pessoa(nome: "Hóspede 6");
-Pessoa p7 = new Pessoa(nome: "Hóspede 7");
+    Suite suite = new(tipoSuite: "Premium", capacidade: 10, valorDiaria: 1000);
 
-hospedes.Add(p1);
-hospedes.Add(p2);
-hospedes.Add(p3);
-hospedes.Add(p4);
-hospedes.Add(p5);
-hospedes.Add(p6);
-hospedes.Add(p7);
+    Reserva reserva = new(diasReservados: 12); // 12 dias para testar o desconto
+    reserva.CadastrarSuite(suite);
+    reserva.CadastrarHospedes(hospedes);
 
-// Cria a suíte
-Suite suite = new Suite(tipoSuite: "Premium", capacidade: 6, valorDiaria: 500);
-
-// Cria uma nova reserva, passando a suíte e os hóspedes
-Reserva reserva = new Reserva(diasReservados: 5);
-reserva.CadastrarSuite(suite);
-reserva.CadastrarHospedes(hospedes);
-
-// Exibe a quantidade de hóspedes e o valor da diária
-Console.WriteLine($"Hóspedes: {reserva.ObterQuantidadeHospedes()}");
-Console.WriteLine($"Valor diária: {reserva.CalcularValorDiaria()}");
+    Console.WriteLine($"Hóspedes: {reserva.ObterQuantidadeHospedes()}");
+    Console.WriteLine($"Valor total com desconto: {reserva.CalcularValorDiaria():C}"); // :C formata como moeda
+}
+catch (Exception ex)
+{
+    Console.WriteLine($"Erro na reserva: {ex.Message}");
+}

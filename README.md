@@ -1,15 +1,17 @@
-# Projeto Hospedagem hotel
+# 🏨 Sistema de Hospedagem em C#
 
-## 1 - Clone o Repositório
-Primeiro, clone o repositório para a sua máquina locas usando o comando
+Projeto desenvolvido em C# para gerenciar reservas de hotel, aplicando conceitos de POO.
 
-``` git clone https://github.com/LeoST25/Projeto-hospedagem-hotel ```
+### 🚀 Tecnologias
+- .NET 8.0
+- C# com POO (Classes, Encapsulamento, List)
 
-## 2 - Abra o projeto
-Abra o projeto no seu ambiente de desenvolvimento integrado (IDE de escolha, como Visual Studio ou Viasual studio Code.
+### 📋 Funcionalidades
+- Cadastro de Hóspedes e Suítes
+- Validação de capacidade da suíte
+- Cálculo de diária com desconto de 10% para +10 dias
 
-## 3 - Execute o projeto
-Agora execute o projeto utilizando o seguinte comando via terminal:
-``` dotnet run ```
-
-E pronto o projeto estará rodando em sua máquina.
+### ▶️ Como rodar
+```bash
+dotnet restore
+dotnet run
